@@ -9,7 +9,7 @@ const UsuarioSchema = new Schema({
     },
     email: {
         type: String, 
-        required: true
+        required: false
     },
 }, {
     timestamps: true
