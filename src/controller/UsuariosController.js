@@ -12,7 +12,7 @@ module.exports = {
     },
 
     async store(req, res){
-        const { nomeCompleto} = req.body;
+        const { nomeCompleto, email} = req.body;
         
         const userExists = await Usuarios.findOne({ nomeCompleto});
 
@@ -21,7 +21,7 @@ module.exports = {
         }
 
         const response = await Usuarios.create({
-            nomeCompleto
+            nomeCompleto, email
         });
         return res.json(response);
 
