@@ -21,5 +21,5 @@ app.use(express.json());
 app.use(routes);
 
 
-server.listen(3333);
+app.listen(3333);
 
