@@ -1,4 +1,5 @@
 const express = require('express');
+const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
@@ -9,6 +10,7 @@ const server = require('http').Server(app);
 
 mongoose.connect(
    'mongodb+srv://rmvsolutions:lorenna123@cluster0-6fif3.azure.mongodb.net/grilomotors?retryWrites=true&w=majority'
+ 
    ,{
      
    useNewUrlParser: true 

@@ -1,6 +1,19 @@
 const Carros = require('../models/Carros');
 
 module.exports = { 
+
+    async index(req, res){
+
+        const { carroID } = req.params;
+
+        const arquivo = await Carros.findById(carroID);
+
+        console.log(arquivo.fotos);
+        
+        return res.json(arquivo.fotos)
+
+    },
+
     async store(req, res){
 
         
