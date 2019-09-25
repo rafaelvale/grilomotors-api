@@ -1,6 +1,11 @@
 const express = require('express');
 const multer = require('multer');
 const uploadConfig = require('./config/upload')
+
+const routes = express.Router();
+
+const upload = multer(uploadConfig);
+
 const UsuariosController = require('./controller/UsuariosController');
 const CarrosController = require('./controller/CarrosController');
 const FotosController = require('./controller/FotosController');
@@ -11,8 +16,6 @@ const AuthController = require('./Auth/AuthController');
 
 
 
-const routes = express.Router();
-const upload = multer(uploadConfig);
 
 
 // routes.get('/login', UsuariosController.index);
