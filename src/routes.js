@@ -17,7 +17,7 @@ const upload = multer(uploadConfig);
 
 // routes.get('/login', UsuariosController.index);
 // routes.post('/login', UsuariosController.store);
-routes.get('/FotosCarros', CarrosController.index);
+routes.get('/Carros', CarrosController.index);
 routes.post('/Carros',upload.single('fotos'), CarrosController.store);
 routes.post('/fotos/:carroID',upload.single('fotos'),FotosController.store);
 routes.get('/fotos/:carroID',FotosController.index);
