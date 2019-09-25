@@ -2,4 +2,5 @@ node_modules
 LightGnat-6cf6
 
 uploads/*
+temp/*
 !uploads/.gitkeep
